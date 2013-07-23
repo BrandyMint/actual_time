@@ -1,0 +1,11 @@
+{
+  "name": "actual_time",
+  "version": "0.0.1",
+  "main": "js/actual_time.js",
+  "ignore": [
+  ],
+  "dependencies": {
+    "jquery": "1.10.2",
+    "moment": "latest"
+  }
+}
