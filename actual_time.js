@@ -45,6 +45,8 @@
   // function set data-time attr to current date/time in ISO8601
   // $el - jquery object
   this.set_actual_time = function($el) {
-    $el.data('time', moment().format());
+    var time = moment().format();
+    $el.data('time', time);
+    $el.attr('data-time', time);
   };
 }).call(this)
