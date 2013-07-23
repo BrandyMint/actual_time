@@ -7,7 +7,7 @@
       $el.find('[role="time-for-now"]').each(function(i, obj){
         var time;
         time = $el.find(obj).data('time')
-        $el.find(obj).html(moment(time).forNow())
+        $el.find(obj).html(moment(time).fromNow())
       });
     }, interval * 1000);
   }
