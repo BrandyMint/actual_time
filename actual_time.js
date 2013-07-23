@@ -5,7 +5,7 @@
 
   _defaults = {
     interval: 60,
-    selector: '[role="time-for-now"]'
+    selector: '[role="time-from-now"]'
   };
 
   _for_now_updater = function($el, selector) {
