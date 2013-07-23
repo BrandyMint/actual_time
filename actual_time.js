@@ -1,11 +1,11 @@
 (function() {
-  // function updates all elements with role="time-for-now"
+  // function updates all elements with role="time"
   // each element should have data-time attr containing valid date string for Date js object
   var _for_now_updater, _defaults;
 
   _defaults = {
     interval: 60,
-    selector: '[role="time-from-now"]'
+    selector: '[role="time"]'
   };
 
   _for_now_updater = function($el, selector) {

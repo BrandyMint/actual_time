@@ -9,8 +9,8 @@ example:
 
     <body>
       <div class="events">
-        it happened <span role="time-from-now" data-time="2013-07-23T15:20:25.880+04:00"></span>
-        and that happened <span role="time-from-now" data-time="2013-07-28T14:30:35.880+04:00"></span>
+        it happened <span role="time" data-time="2013-07-23T15:20:25.880+04:00"></span>
+        and that happened <span role="time" data-time="2013-07-28T14:30:35.880+04:00"></span>
         this won't update unless custom selector specified <div class="event" data-time="2013-08-23T11:20:25.880+04:00"></div>
       </div>
     </body>
@@ -43,6 +43,6 @@ options (hash):
 
     optional:
 
-      selector: Sizzle selector to filter objects for update (default: '[role="time-from-now"]')
+      selector: Sizzle selector to filter objects for update (default: '[role="time"]')
       interval: interval in seconds between updates (default: 60 sec)
 
