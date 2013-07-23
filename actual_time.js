@@ -19,15 +19,21 @@
   };
 
   // options:
-  //* required
-  // $el: - jquery function or jquery object $('div.class')
-  //
   //* optional
+  // $el: - jquery function or jquery object $('div.class')
   // selector: Sizzle selector for elements to be updated
   // interval: update interval
 
   this.actual_time = function(options) {
-    $ = options.$el;
+    var $;
+
+    if (typeof options !== "undefined" && typeof options.$el !== "undefined" && options.$el != null) {
+      $ = options.$el;
+    } else if (typeof jQuery !== "undefined" && jQuery != null) {
+      $ = jQuery;
+    } else {
+      return console.log('actual_time unable to bind jQuery function. exiting...');
+    }
     if (typeof $ === "function") { $ = $('body'); }
     options = $.extend(_defaults, options)
 

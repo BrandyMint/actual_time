@@ -20,7 +20,7 @@ javascript:
 
     <script type="text/javascript">
       // basic usage
-      window.actual_time({ $el: $ });
+      window.actual_time();
     </script>
 
 or
@@ -40,13 +40,10 @@ function updates all elements within $el scope filtered by options.selector with
 
 options (hash):
 
-    required:
-
-      $el: jQuery function or jQuery object
-      (in case of jQuery function objects scoped to $('body'))
-
     optional:
 
+      $el: jQuery function or jQuery object
+           (in case of jQuery function objects scoped to $('body'))
       selector: Sizzle selector to filter objects for update (default: '[role="time"]')
       interval: interval in seconds between updates (default: 60 sec)
 
