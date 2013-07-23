@@ -45,6 +45,13 @@
   // function set data-time attr to current date/time in ISO8601
   // $el - jquery object
   this.set_actual_time = function($el) {
-    $el.data('time', moment().format());
+    var time = moment().format();
+    // this double assignment is necessary because jquery with $.data updates only
+    // inner element's data object, but with $.attr it also shows changes in elements panel (chrome)
+    // tho when assigned with only $.attr then $.data('time') return correct value for first call
+    // but when changed with $.attr lately $.data('time') still returns old values and it changes
+    // only with $.data('time', new_value) call
+    $el.data('time', time);
+    $el.attr('data-time', time);
   };
 }).call(this)
