@@ -1,7 +1,7 @@
 {
   "name": "actual_time",
   "version": "0.0.1",
-  "main": "js/actual_time.js",
+  "main": "actual_time.js",
   "ignore": [
   ],
   "dependencies": {
