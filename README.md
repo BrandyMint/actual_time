@@ -3,7 +3,8 @@ actual_time
 
 JavaScript time actualizer
 
-Component registers function actual_time(options)
+Component registers functions
+  actual_time(options), set_actual_time($el)
 
 example:
 
@@ -32,7 +33,10 @@ or
         });
     </script>
 
-actual_time function updates all elements within $el scope filtered by options.selector with momento.fromNow() function every options.interval seconds
+actual_time(options)
+--------------------
+
+function updates all elements within $el scope filtered by options.selector with momento.fromNow() function every options.interval seconds
 
 options (hash):
 
@@ -46,3 +50,12 @@ options (hash):
       selector: Sizzle selector to filter objects for update (default: '[role="time"]')
       interval: interval in seconds between updates (default: 60 sec)
 
+
+set_actual_time($el)
+--------------------
+
+function sets current date/time in ISO8601 format for provided jquery element
+
+option:
+
+    $el: jQuery object ($('div.span').eq(0))

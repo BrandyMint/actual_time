@@ -34,5 +34,11 @@
     _for_now_updater($, options.selector).call();
 
     setInterval( _for_now_updater($, options.selector), options.interval * 1000);
-  }
+  };
+
+  // function set data-time attr to current date/time in ISO8601
+  // $el - jquery object
+  this.set_actual_time = function($el) {
+    $el.data('time', moment().format());
+  };
 }).call(this)
