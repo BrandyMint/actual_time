@@ -65,5 +65,6 @@
       $.find(obj).data('time', time);
       $.find(obj).attr('data-time', time);
     });
+    _for_now_updater($, options.selector).call();
   };
 }).call(this)
