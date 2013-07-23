@@ -1,7 +1,7 @@
 (function() {
   // function updates all elements with role="time-for-now"
   // each element should have data-time attr containing valid date string for Date js object
-  var _for_now_updater, _defaults, _intervalID = null;
+  var _for_now_updater, _defaults;
 
   _defaults = {
     interval: 60,
@@ -33,7 +33,6 @@
 
     _for_now_updater($, options.selector).call();
 
-    if (_intervalID != null) { clearInterval(_intervalID) }
-    _intervalID = setInterval( _for_now_updater($, options.selector), options.interval * 1000);
+    setInterval( _for_now_updater($, options.selector), options.interval * 1000);
   }
 }).call(this)
