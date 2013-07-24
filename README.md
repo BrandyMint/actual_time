@@ -48,11 +48,17 @@ options (hash):
       interval: interval in seconds between updates (default: 60 sec)
 
 
-set_actual_time($el)
---------------------
+set_actual_time(options)
+------------------------
 
-function sets current date/time in ISO8601 format for provided jquery element
+function sets current date/time in ISO8601 format for all elements within provided jquery element filtered by optional selector
 
-option:
+options:
 
-    $el: jQuery object ($('div.span').eq(0))
+    required:
+
+      $el: jQuery object ($('div.span').eq(0))
+
+    optional:
+
+      selector: Sizzle selector to filter object to set data-time attr (default: '[role="time"]')
