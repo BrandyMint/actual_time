@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "actual_time.js",
   "ignore": [
-    "src/*",
+    "src",
     "c"
   ],
   "dependencies": {
